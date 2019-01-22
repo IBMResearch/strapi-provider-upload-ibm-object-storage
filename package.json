@@ -1,0 +1,60 @@
+{
+  "name": "strapi-provider-upload-ibm",
+  "version": "0.1.0",
+  "description": "IBM Cloud Object Storage provider for Strapi upload plugin",
+  "keywords": [
+    "upload",
+    "ibm",
+    "strapi",
+    "provider"
+  ],
+  "author": {
+    "name": "IBM RESEARCH",
+    "url": "http://research.ibm.com"
+  },
+  "homepage": "https://github.com/IBMResearch/strapi-provider-upload-ibm",
+  "contributors": [
+    "https://github.com/IBMResearch/strapi-provider-upload-ibm/graphs/contributors"
+  ],
+  "scripts": {
+    "format": "prettier --write '**/*.js'",
+    "precommit": "lint-staged",
+    "lint": "npm run format && eslint .",
+    "deps": "depcheck --ignores='lint-staged,prettier'",
+    "test": "npm run lint && npm run deps"
+  },
+  "dependencies": {
+    "ibm-cos-sdk": "^1.4.1"
+  },
+  "devDependencies": {
+    "depcheck": "^0.6.11",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.4.0",
+    "eslint-plugin-import": "^2.14.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "strapi": {
+    "isProvider": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/IBMResearch/strapi-provider-upload-ibm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IBMResearch/strapi-provider-upload-ibm/issues"
+  },
+  "engines": {
+    "node": ">= 10.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "license": "Apache-2.0"
+}
