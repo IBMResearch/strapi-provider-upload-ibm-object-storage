@@ -20,7 +20,7 @@
     "format": "prettier --write '**/*.js'",
     "precommit": "lint-staged",
     "lint": "npm run format && eslint .",
-    "deps": "depcheck --ignores='lint-staged,prettier'",
+    "deps": "depcheck --ignores='lint-staged,prettier,release-it'",
     "test": "npm run lint && npm run deps",
     "release": "npm test && release-it"
   },
