@@ -21,7 +21,8 @@
     "precommit": "lint-staged",
     "lint": "npm run format && eslint .",
     "deps": "depcheck --ignores='lint-staged,prettier'",
-    "test": "npm run lint && npm run deps"
+    "test": "npm run lint && npm run deps",
+    "release": "npm test && release-it"
   },
   "dependencies": {
     "ibm-cos-sdk": "^1.4.1"
@@ -33,7 +34,8 @@
     "eslint-config-prettier": "^3.4.0",
     "eslint-plugin-import": "^2.14.0",
     "lint-staged": "^8.1.0",
-    "prettier": "^1.15.3"
+    "prettier": "^1.15.3",
+    "release-it": "^10.0.2"
   },
   "lint-staged": {
     "*.js": [
