@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-ibm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "IBM Cloud Object Storage provider for Strapi upload plugin",
   "keywords": [
     "upload",
