@@ -21,21 +21,19 @@
     "precommit": "lint-staged",
     "lint": "npm run format && eslint .",
     "deps": "depcheck --ignores='lint-staged,prettier,release-it'",
-    "test": "npm run lint && npm run deps",
-    "release": "npm test && release-it"
+    "test": "npm run lint && npm run deps"
   },
   "dependencies": {
-    "ibm-cos-sdk": "^1.4.1"
+    "ibm-cos-sdk": "^1.5.2"
   },
   "devDependencies": {
-    "depcheck": "^0.6.11",
-    "eslint": "^5.12.0",
-    "eslint-config-airbnb-base": "^13.1.0",
+    "depcheck": "^0.8.3",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^3.4.0",
-    "eslint-plugin-import": "^2.14.0",
-    "lint-staged": "^8.1.0",
-    "prettier": "^1.15.3",
-    "release-it": "^10.0.2"
+    "eslint-plugin-import": "^2.18.2",
+    "lint-staged": "^9.2.4",
+    "prettier": "^1.18.2"
   },
   "lint-staged": {
     "*.js": [
