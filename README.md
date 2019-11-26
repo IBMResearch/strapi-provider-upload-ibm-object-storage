@@ -13,6 +13,8 @@
 ```sh
 cd plugins/upload
 npm i --save strapi-provider-upload-ibm
+cd ..
+npm run build
 ```
 
 ## Use
