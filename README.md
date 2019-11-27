@@ -20,11 +20,3 @@ npm run build
 ## Use
 
 :rocket: Like any other [Strapi upload provider](https://strapi.io/documentation/3.x.x/guides/upload.html#usage).
-
-## License
-
-:penguin: This project is released under the [Apache license, v2.0](https://www.apache.org/licenses/LICENSE-2.0).
-
-## Do you want to help?
-
-:sunglasses: If you'd like to help please take a look to our [contribution guidelines](https://github.com/Qiskit/qiskit-js/blob/master/CONTRIBUTING.md).
