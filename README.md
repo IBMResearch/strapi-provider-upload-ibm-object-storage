@@ -9,9 +9,7 @@
 :pizza: Inside a project folder.
 
 ```sh
-cd plugins/upload
 npm i --save strapi-provider-upload-ibm
-cd ..
 npm run build
 ```
 
