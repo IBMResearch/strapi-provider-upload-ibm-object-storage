@@ -16,6 +16,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.2] - 2020-04-09
+
+### ✏️ Changed
+
+- Update package author to be consistent with the rest of the projects.
+
+### 👾 Security
+
+- Dependencies update.
+
 ## [1.0.1] - 2019-08-26
 
 ### 👾 Security
@@ -32,6 +42,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - First implementation.
 
-[unreleased]: https://github.com/IBMResearch/strapi-provider-upload-ibm/compare/v1.0.1...HEAD
+[unreleased]: https://github.com/IBMResearch/strapi-provider-upload-ibm/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/IBMResearch/strapi-provider-upload-ibm/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/IBMResearch/strapi-provider-upload-ibm/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/IBMResearch/strapi-provider-upload-ibm/compare/ddb0cfbfef39b8e4d07c695261d9efdefd3a20e7...v1.0.0
