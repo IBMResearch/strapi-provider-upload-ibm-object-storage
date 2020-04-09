@@ -24,16 +24,16 @@
     "test": "npm run lint && npm run deps"
   },
   "dependencies": {
-    "ibm-cos-sdk": "^1.5.2"
+    "ibm-cos-sdk": "^1.6.0"
   },
   "devDependencies": {
-    "depcheck": "^0.8.3",
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb-base": "^14.0.0",
+    "depcheck": "^0.8.4",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
     "eslint-config-prettier": "^3.4.0",
-    "eslint-plugin-import": "^2.18.2",
-    "lint-staged": "^9.2.4",
-    "prettier": "^1.18.2"
+    "eslint-plugin-import": "^2.20.2",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1"
   },
   "eslintConfig": {
     "extends": [
