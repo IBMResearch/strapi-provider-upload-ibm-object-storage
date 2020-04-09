@@ -4,7 +4,7 @@
   "description": "IBM Cloud Object Storage provider for Strapi upload plugin",
   "license": "Apache-2.0",
   "repository": "github:IBMResearch/strapi-provider-upload-ibm",
-  "author": "IBM - Emerging Technology Experiences <etxservi@us.ibm.com>",
+  "author": "IBM Research - Emerging Technology Experiences <etxservi@us.ibm.com>",
   "homepage": "https://github.com/IBMResearch/strapi-provider-upload-ibm",
   "engines": {
     "node": ">=10.0.0",
