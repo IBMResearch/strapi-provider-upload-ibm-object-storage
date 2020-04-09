@@ -8,10 +8,7 @@
     "strapi",
     "provider"
   ],
-  "author": {
-    "name": "IBM RESEARCH",
-    "url": "http://research.ibm.com"
-  },
+  "author": "IBM - Emerging Technology Experiences <etxservi@us.ibm.com>",
   "homepage": "https://github.com/IBMResearch/strapi-provider-upload-ibm",
   "contributors": [
     "https://github.com/IBMResearch/strapi-provider-upload-ibm/graphs/contributors"
