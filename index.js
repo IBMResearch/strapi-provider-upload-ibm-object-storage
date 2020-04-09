@@ -32,7 +32,7 @@ module.exports = {
       type: 'text',
     },
   },
-  init: config => {
+  init: (config) => {
     const region = config.region || 'us-south';
     const endpoint = `s3.${region}.cloud-object-storage.appdomain.cloud`;
 
