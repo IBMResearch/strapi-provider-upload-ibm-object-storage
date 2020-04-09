@@ -2,24 +2,26 @@
   "name": "strapi-provider-upload-ibm",
   "version": "1.0.2",
   "description": "IBM Cloud Object Storage provider for Strapi upload plugin",
+  "license": "Apache-2.0",
+  "repository": "github:IBMResearch/strapi-provider-upload-ibm",
+  "author": "IBM - Emerging Technology Experiences <etxservi@us.ibm.com>",
+  "homepage": "https://github.com/IBMResearch/strapi-provider-upload-ibm",
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "scripts": {
+    "deps": "depcheck --ignores='husky,lint-staged,prettier,prettier-plugin-package'",
+    "format": "prettier --write \"**/*{js,json,md,yml}\"",
+    "lint": "eslint \"**/*.js\"",
+    "test": "npm run lint && npm run deps"
+  },
   "keywords": [
     "upload",
     "ibm",
     "strapi",
     "provider"
   ],
-  "author": "IBM - Emerging Technology Experiences <etxservi@us.ibm.com>",
-  "homepage": "https://github.com/IBMResearch/strapi-provider-upload-ibm",
-  "contributors": [
-    "https://github.com/IBMResearch/strapi-provider-upload-ibm/graphs/contributors"
-  ],
-  "scripts": {
-    "format": "prettier --write '**/*.js'",
-    "precommit": "lint-staged",
-    "lint": "npm run format && eslint .",
-    "deps": "depcheck --ignores='lint-staged,prettier,release-it'",
-    "test": "npm run lint && npm run deps"
-  },
   "dependencies": {
     "ibm-cos-sdk": "^1.6.0"
   },
@@ -27,10 +29,12 @@
     "depcheck": "^0.8.4",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-config-prettier": "^3.4.0",
-    "eslint-plugin-import": "^2.20.2",
-    "lint-staged": "^9.5.0",
-    "prettier": "^1.19.1"
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.0",
+    "husky": "^4.2.0",
+    "lint-staged": "^10.1.0",
+    "prettier": "2.0.4",
+    "prettier-plugin-package": "^1.0.0"
   },
   "eslintConfig": {
     "extends": [
@@ -47,30 +51,23 @@
       ]
     }
   },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "all"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
+    "**/*{js,json,md,yml}": [
+      "prettier --write"
+    ],
+    "**/*.js": [
+      "eslint --fix"
     ]
+  },
+  "prettier": {
+    "singleQuote": true
   },
   "strapi": {
     "isProvider": true
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/IBMResearch/strapi-provider-upload-ibm.git"
-  },
-  "bugs": {
-    "url": "https://github.com/IBMResearch/strapi-provider-upload-ibm/issues"
-  },
-  "engines": {
-    "node": ">= 10.0.0",
-    "npm": ">= 6.0.0"
-  },
-  "license": "Apache-2.0"
+  }
 }
