@@ -11,7 +11,7 @@
     "npm": ">=6.0.0"
   },
   "scripts": {
-    "deps": "depcheck --ignores='lint-staged,prettier,release-it'",
+    "deps": "depcheck --ignores='husky,lint-staged,prettier,prettier-plugin-package'",
     "format": "prettier --write \"**/*{js,json,md,yml}\"",
     "lint": "eslint \"**/*.js\"",
     "test": "npm run lint && npm run deps"
