@@ -13,8 +13,7 @@
   "scripts": {
     "deps": "depcheck --ignores='lint-staged,prettier,release-it'",
     "format": "prettier --write \"**/*{js,json,md,yml}\"",
-    "lint": "npm run format && eslint .",
-    "precommit": "lint-staged",
+    "lint": "eslint \"**/*.js\"",
     "test": "npm run lint && npm run deps"
   },
   "keywords": [
@@ -30,10 +29,11 @@
     "depcheck": "^0.8.4",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-config-prettier": "^3.4.0",
-    "eslint-plugin-import": "^2.20.2",
-    "lint-staged": "^9.5.0",
-    "prettier": "^2.0.4",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.0",
+    "husky": "^4.2.0",
+    "lint-staged": "^10.1.0",
+    "prettier": "2.0.4",
     "prettier-plugin-package": "^1.0.0"
   },
   "eslintConfig": {
@@ -51,11 +51,17 @@
       ]
     }
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
+    "**/*{js,json,md,yml}": [
+      "prettier --write"
+    ],
+    "**/*.js": [
+      "eslint --fix"
     ]
   },
   "prettier": {
