@@ -35,6 +35,25 @@
     "lint-staged": "^9.2.4",
     "prettier": "^1.18.2"
   },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "rules": {
+      "strict": [
+        "off"
+      ]
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
   "lint-staged": {
     "*.js": [
       "eslint --fix",
