@@ -12,7 +12,7 @@
   },
   "scripts": {
     "deps": "depcheck --ignores='lint-staged,prettier,release-it'",
-    "format": "prettier --write '**/*.js'",
+    "format": "prettier --write \"**/*{js,json,md,yml}\"",
     "lint": "npm run format && eslint .",
     "precommit": "lint-staged",
     "test": "npm run lint && npm run deps"
