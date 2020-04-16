@@ -1,6 +1,6 @@
 'use strict';
 
-const AWS = require('ibm-cos-sdk');
+const ibm = require('ibm-cos-sdk');
 
 function buildKey(name, hash) {
   return `${hash}${name}`;
@@ -15,8 +15,7 @@ module.exports = {
     const region = config.region || 'us-south';
     const endpoint = `s3.${region}.cloud-object-storage.appdomain.cloud`;
 
-    const cos = new AWS.S3({
-      ibmAuthEndpoint: 'https://iam.ng.bluemix.net/oidc/token',
+    const cos = new ibm.S3({
       endpoint,
       apiKeyId: config.api_key,
       serviceInstanceId: config.resource_id,
