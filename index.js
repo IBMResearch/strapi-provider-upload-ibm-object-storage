@@ -11,16 +11,16 @@ function buildUrl(endpoint, bucket, key) {
 }
 
 module.exports = {
-  init: (config) => {
-    const region = config.region || 'us-south';
+  init: (providerOptions) => {
+    const region = providerOptions.region || 'us-south';
     const endpoint = `s3.${region}.cloud-object-storage.appdomain.cloud`;
 
     const cos = new ibm.S3({
       endpoint,
-      apiKeyId: config.api_key,
-      serviceInstanceId: config.resource_id,
+      apiKeyId: providerOptions.api_key,
+      serviceInstanceId: providerOptions.resource_id,
     });
-    const { bucket } = config;
+    const { bucket } = providerOptions;
 
     return {
       async upload(file) {
