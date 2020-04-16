@@ -2,14 +2,6 @@
 
 const ibm = require('ibm-cos-sdk');
 
-function buildKey(name, hash) {
-  return `${hash}${name}`;
-}
-
-function buildUrl(endpoint, bucket, key) {
-  return `https://${endpoint}/${bucket}/${key}`;
-}
-
 module.exports = {
   init: (providerOptions) => {
     const {
@@ -27,30 +19,24 @@ module.exports = {
 
     return {
       async upload(file) {
-        const key = buildKey(file.name, file.hash);
-
         await cos
           .putObject({
             Bucket: bucketName,
-            Key: key,
+            Key: file.hash,
             Body: Buffer.from(file.buffer, 'binary'),
             ACL: 'public-read',
             ContentType: file.mime,
           })
           .promise();
 
-        /* eslint-disable no-param-reassign */
-        file.public_id = key;
-        file.url = buildUrl(endpoint, bucketName, key);
-        /* eslint-enable no-param-reassign */
+        // eslint-disable-next-line no-param-reassign
+        file.url = `https://${endpoint}/${bucketName}/${file.hash}`;
       },
 
       async delete(file) {
-        const key = buildKey(file.name, file.hash);
-
         return cos
           .deleteObject({
-            Key: key,
+            Key: file.hash,
             Bucket: bucketName,
           })
           .promise();
