@@ -11,27 +11,6 @@ function buildUrl(endpoint, bucket, key) {
 }
 
 module.exports = {
-  provider: 'ibm',
-  name: 'IBM Cloud Object Storage',
-  auth: {
-    bucket: {
-      label: 'Bucket',
-      type: 'text',
-    },
-    region: {
-      label: 'Region',
-      type: 'enum',
-      values: ['eu-de', 'au-syd', 'eu-gb', 'jp-tok', 'us-east', 'us-south'],
-    },
-    api_key: {
-      label: 'API Key',
-      type: 'text',
-    },
-    resource_id: {
-      label: 'Resource instance ID',
-      type: 'text',
-    },
-  },
   init: (config) => {
     const region = config.region || 'us-south';
     const endpoint = `s3.${region}.cloud-object-storage.appdomain.cloud`;
