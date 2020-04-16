@@ -12,15 +12,18 @@ function buildUrl(endpoint, bucket, key) {
 
 module.exports = {
   init: (providerOptions) => {
-    const region = providerOptions.region || 'us-south';
-    const endpoint = `s3.${region}.cloud-object-storage.appdomain.cloud`;
+    const {
+      endpoint,
+      apiKeyId,
+      serviceInstanceId,
+      bucketName,
+    } = providerOptions;
 
     const cos = new ibm.S3({
       endpoint,
-      apiKeyId: providerOptions.api_key,
-      serviceInstanceId: providerOptions.resource_id,
+      apiKeyId,
+      serviceInstanceId,
     });
-    const { bucket } = providerOptions;
 
     return {
       async upload(file) {
@@ -28,26 +31,27 @@ module.exports = {
 
         await cos
           .putObject({
-            ACL: 'public-read',
-            Body: Buffer.from(file.buffer, 'binary'),
-            Bucket: bucket,
-            ContentType: file.mime,
+            Bucket: bucketName,
             Key: key,
+            Body: Buffer.from(file.buffer, 'binary'),
+            ACL: 'public-read',
+            ContentType: file.mime,
           })
           .promise();
 
         /* eslint-disable no-param-reassign */
         file.public_id = key;
-        file.url = buildUrl(endpoint, bucket, key);
+        file.url = buildUrl(endpoint, bucketName, key);
         /* eslint-enable no-param-reassign */
       },
+
       async delete(file) {
         const key = buildKey(file.name, file.hash);
 
         return cos
           .deleteObject({
-            Bucket: bucket,
             Key: key,
+            Bucket: bucketName,
           })
           .promise();
       },
