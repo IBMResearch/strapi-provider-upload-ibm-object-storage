@@ -20,10 +20,12 @@ Your configuration is passed down to the provider. (e.g: `new imb.S3(config)`).
 {
   "provider": "ibm",
   "providerOptions": {
-    "endpoint": "",
-    "apiKeyId": "",
-    "serviceInstanceId": "",
-    "bucketName": ""
+    "endpoint": "<endpoint>",
+    "apiKeyId": "<api-key>",
+    "serviceInstanceId": "<resource-instance-id>",
+    "params": {
+      "Bucket": "<bucket>"
+    }
   }
 }
 ```
