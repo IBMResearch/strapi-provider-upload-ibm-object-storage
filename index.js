@@ -1,3 +1,10 @@
+/**
+ * Copyright (c) IBM, Corp. and its affiliates.
+ *
+ * This source code is licensed under the Apache license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 'use strict';
 
 const ibm = require('ibm-cos-sdk');
