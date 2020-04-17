@@ -64,10 +64,12 @@ module.exports = {
         /* eslint-enable no-param-reassign */
       },
       async delete(file) {
+        const key = buildKey(file.name, file.hash);
+
         return cos
           .deleteObject({
             Bucket: bucket,
-            Key: file.public_id,
+            Key: key,
           })
           .promise();
       },
