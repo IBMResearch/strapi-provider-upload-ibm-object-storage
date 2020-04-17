@@ -1,11 +1,11 @@
 {
-  "name": "strapi-provider-upload-ibm",
+  "name": "strapi-provider-upload-ibm-object-storage",
   "version": "1.0.2",
   "description": "IBM Cloud Object Storage provider for Strapi upload plugin",
   "license": "Apache-2.0",
-  "repository": "github:IBMResearch/strapi-provider-upload-ibm",
+  "repository": "github:IBMResearch/strapi-provider-upload-ibm-object-storage",
   "author": "IBM Research - Emerging Technology Experiences <etxservi@us.ibm.com>",
-  "homepage": "https://github.com/IBMResearch/strapi-provider-upload-ibm",
+  "homepage": "https://github.com/IBMResearch/strapi-provider-upload-ibm-object-storage",
   "engines": {
     "node": ">=10.0.0",
     "npm": ">=6.0.0"
