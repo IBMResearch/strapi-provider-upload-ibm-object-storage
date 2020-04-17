@@ -16,42 +16,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-### ✏️ Changed
-
-- Update to support Strapi `v3.0.0-beta.20`
-- Rename provider to `ibm-object-storage`
-
-### 🐛 Fixed
-
-- Fix the `delete` function
-
-## [1.0.2] - 2020-04-09
-
-### ✏️ Changed
-
-- Update package author to be consistent with the rest of the projects.
-
-### 👾 Security
-
-- Dependencies update.
-
-## [1.0.1] - 2019-08-26
-
-### 👾 Security
-
-- Dependencies update.
-
-### ❌ Removed
-
-- Package `release-it` from dev dependencies.
-
-## [1.0.0] - 2019-01-22
+## [1.0.0] - 2020-04-17
 
 ### 🎉 Added
 
 - First implementation.
 
-[unreleased]: https://github.com/IBMResearch/strapi-provider-upload-ibm-object-storage/compare/v1.0.2...HEAD
-[1.0.2]: https://github.com/IBMResearch/strapi-provider-upload-ibm-object-storage/compare/v1.0.1...v1.0.2
-[1.0.1]: https://github.com/IBMResearch/strapi-provider-upload-ibm-object-storage/compare/v1.0.0...v1.0.1
+[unreleased]: https://github.com/IBMResearch/strapi-provider-upload-ibm-object-storage/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/IBMResearch/strapi-provider-upload-ibm-object-storage/compare/ddb0cfbfef39b8e4d07c695261d9efdefd3a20e7...v1.0.0
