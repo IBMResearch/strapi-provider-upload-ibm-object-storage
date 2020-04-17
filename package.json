@@ -16,6 +16,9 @@
     "lint": "eslint \"**/*.js\"",
     "test": "npm run lint && npm run deps"
   },
+  "files": [
+    "index.js"
+  ],
   "keywords": [
     "upload",
     "ibm",
