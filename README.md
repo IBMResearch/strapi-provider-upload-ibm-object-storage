@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-npm install strapi-provider-upload-ibm
+npm install strapi-provider-upload-ibm-object-storage
 ```
 
 ## Configurations
@@ -18,7 +18,7 @@ Your configuration is passed down to the provider. (e.g: `new imb.S3(config)`).
 
 ```json
 {
-  "provider": "ibm",
+  "provider": "ibm-object-storage",
   "providerOptions": {
     "endpoint": "<endpoint>",
     "apiKeyId": "<api-key>",
