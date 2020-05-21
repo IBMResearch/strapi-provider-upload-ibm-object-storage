@@ -60,12 +60,8 @@
     }
   },
   "lint-staged": {
-    "**/*{js,json,md,yml}": [
-      "prettier --write"
-    ],
-    "**/*.js": [
-      "eslint --fix"
-    ]
+    "**/*{js,json,md,yml}": "prettier --write",
+    "**/*.js": "eslint --fix"
   },
   "prettier": {
     "singleQuote": true
