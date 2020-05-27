@@ -21,13 +21,15 @@ module.exports = ({ env }) => ({
   upload: {
     provider: 'ibm-object-storage',
     providerOptions: {
-      endpoint: '<endpoint>',
-      apiKeyId: '<api-key>',
-      serviceInstanceId: '<resource-instance-id>',
+      endpoint: env('IBM_COS_ENDPOINT', '<endpoint>'),
+      apiKeyId: env('IBM_COS_API_KEY_ID', '<api-key>'),
+      serviceInstanceId: env('IBM_COS_SERVICE_INSTANCE_ID', '<resource-instance-id>'),
       params: {
-        Bucket: '<bucket>',
+        Bucket: env('IBM_COS_BUCKET', '<bucket>'),
       },
     },
   }
 });
 ```
+
+You can read more about the configuration framework and the usage of environment variables in the [Strapi 3.x stable documentation](https://strapi.io/documentation/v3.x/concepts/configurations.html#environment-variables).
