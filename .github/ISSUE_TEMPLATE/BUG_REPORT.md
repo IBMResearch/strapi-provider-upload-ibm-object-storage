@@ -1,29 +1,27 @@
 ---
 name: 🐛 Bug report
-about: Create a report to help us improve 🤔.
+about: Create a report to help us improve
+title: ''
+labels: 'bug'
+assignees: ''
 ---
 
-<!-- ⚠️ If you do not respect this template, your issue will be closed -->
-<!-- ⚠️ Make sure to browse the opened and closed issues -->
+#### Describe the bug
 
-### Environment (please complete the following information):
+<!-- A clear and concise description of what the bug is. -->
 
-- **Qiskit.js version**:
-- **Node.js version**:
-- **Operating system**:
+#### To reproduce
 
-### What is the current behavior?
+<!-- An step by step description of how to reproduce the bug. -->
 
+#### Expected behavior
 
+<!-- A clear and concise description of what you expected to happen. -->
 
-### Steps to reproduce the problem
+#### System
 
-
-
-### What is the expected behavior?
-
-
-
-### Suggested solutions
-
-
+- Node.js version:
+- npm version:
+- Strapi version:
+- Database:
+- Operating system:
