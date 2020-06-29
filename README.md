@@ -32,4 +32,6 @@ module.exports = ({ env }) => ({
 });
 ```
 
+To get these values you need to create new service credentials. Except for the `endpoint`, which is provided in the setup section of the bucket.
+
 You can read more about the configuration framework and the usage of environment variables in the [Strapi 3.x stable documentation](https://strapi.io/documentation/v3.x/concepts/configurations.html#environment-variables).
