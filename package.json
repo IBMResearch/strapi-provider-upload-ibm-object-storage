@@ -26,7 +26,7 @@
     "provider"
   ],
   "dependencies": {
-    "ibm-cos-sdk": "^1.6.0"
+    "ibm-cos-sdk": "^1.6.1"
   },
   "devDependencies": {
     "depcheck": "^1.0.0",
@@ -34,9 +34,9 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
-    "husky": "^4.2.0",
-    "lint-staged": "^10.2.0",
-    "prettier": "~2.0.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "~2.0.5",
     "prettier-plugin-package": "^1.0.0"
   },
   "eslintConfig": {
