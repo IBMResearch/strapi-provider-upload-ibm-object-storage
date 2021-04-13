@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-npm install strapi-provider-upload-ibm-object-storage
+npm install --save IBMResearch/strapi-provider-upload-ibm-object-storage
 ```
 
 ## Configuration
@@ -28,7 +28,7 @@ module.exports = ({ env }) => ({
         Bucket: env('IBM_COS_BUCKET', '<bucket>'),
       },
     },
-  }
+  },
 });
 ```
 

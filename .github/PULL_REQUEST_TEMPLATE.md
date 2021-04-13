@@ -10,8 +10,4 @@
 
 ### Summary
 
-
-
 ### Details and comments
-
-

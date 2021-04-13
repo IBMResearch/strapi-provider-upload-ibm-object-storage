@@ -7,18 +7,20 @@
   "author": "IBM Research - Emerging Technology Experiences <etxservi@us.ibm.com>",
   "homepage": "https://github.com/IBMResearch/strapi-provider-upload-ibm-object-storage",
   "engines": {
-    "node": ">=10.0.0",
-    "npm": ">=6.0.0"
+    "node": ">=14"
   },
   "scripts": {
-    "deps": "depcheck --ignores='husky,lint-staged,prettier,prettier-plugin-package'",
-    "format": "prettier --write \"**/*{js,json,md,yml}\"",
-    "lint": "eslint \"**/*.js\"",
-    "test": "npm run lint && npm run deps"
+    "deps": "depcheck --ignores='lint-staged,prettier,prettier-plugin-package'",
+    "format": "prettier --write . && eslint --fix .",
+    "lint": "eslint .",
+    "test": "npm run deps && npm run format && npm run lint"
   },
   "files": [
     "index.js"
   ],
+  "strapi": {
+    "isProvider": true
+  },
   "keywords": [
     "upload",
     "ibm",
@@ -30,43 +32,47 @@
   },
   "devDependencies": {
     "depcheck": "^1.4.0",
-    "eslint": "^7.24.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.23.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
-    "husky": "^6.0.0",
-    "lint-staged": "^10.5.4",
-    "prettier": "~2.2.1",
-    "prettier-plugin-package": "^1.3.0"
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "endOfLine": "lf"
   },
   "eslintConfig": {
+    "parser": "babel-eslint",
     "extends": [
       "airbnb-base",
-      "prettier"
+      "plugin:node/recommended",
+      "plugin:prettier/recommended"
     ],
     "env": {
+      "commonjs": true,
       "es6": true,
-      "node": true
+      "node": true,
+      "browser": false,
+      "jest": true
+    },
+    "globals": {
+      "strapi": true
     },
     "rules": {
       "strict": [
-        "off"
-      ]
+        "error",
+        "global"
+      ],
+      "prettier/prettier": "warn"
     }
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "**/*{js,json,md,yml}": "prettier --write",
-    "**/*.js": "eslint --fix"
-  },
-  "prettier": {
-    "singleQuote": true
-  },
-  "strapi": {
-    "isProvider": true
-  }
+  "eslintIgnore": [
+    "**/node_modules/**"
+  ]
 }

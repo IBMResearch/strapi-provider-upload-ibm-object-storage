@@ -9,11 +9,10 @@
 
 const ibm = require('ibm-cos-sdk');
 
-const buildUrl = (options, key) =>
-  `https://${options.endpoint}/${options.params.Bucket}/${key}`;
+const buildUrl = (options, key) => `https://${options.endpoint}/${options.params.Bucket}/${key}`;
 
 module.exports = {
-  init: (providerOptions) => {
+  init: providerOptions => {
     const cos = new ibm.S3(providerOptions);
 
     return {
