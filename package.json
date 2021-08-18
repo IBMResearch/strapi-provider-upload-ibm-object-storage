@@ -28,18 +28,18 @@
     "provider"
   ],
   "dependencies": {
-    "ibm-cos-sdk": "^1.10.0"
+    "ibm-cos-sdk": "^1.10.2"
   },
   "devDependencies": {
-    "depcheck": "^1.4.0",
+    "depcheck": "^1.4.2",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.28.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.2.0",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "^2.3.1"
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2"
   },
   "prettier": {
     "printWidth": 100,
