@@ -28,7 +28,7 @@
     "provider"
   ],
   "dependencies": {
-    "ibm-cos-sdk": "^1.10.2"
+    "ibm-cos-sdk": "^1.12.0"
   },
   "devDependencies": {
     "depcheck": "^1.4.2",
